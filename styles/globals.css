@@ -1,0 +1,65 @@
+:root {
+  --font-1-lxx-b: 700 4rem/5.25rem var(--font-oswald), sans-serif;
+  --font-1-lx-sb: 600 3rem/3.75rem var(--font-oswald), sans-serif;
+  --font-1-l-sb: 600 2rem/2.5rem var(--font-oswald), sans-serif;
+  --font-1-m-sb: 600 1.5rem/2.25rem var(--font-oswald), sans-serif;
+  --font-1-s-sb: 600 1.125rem/1.5rem var(--font-oswald), sans-serif;
+  --font-2-l-b: 700 2rem/2.5rem var(--font-roboto), sans-serif;
+  --font-2-m-r: 400 1.5rem/2.25rem var(--font-roboto), sans-serif;
+  --font-2-s-r: 400 1rem/1.125rem var(--font-roboto), sans-serif;
+  --p1: #f7d10c;
+  --p2: #734c01;
+  --p3: #038ad6;
+  --g1: linear-gradient(var(--p1), #f3b107);
+  --c0: #ffffff;
+  --c1: #f7f7f7;
+  --c2: #ededed;
+  --c3: #dedede;
+  --c4: #cccccc;
+  --c5: #b2b2b2;
+  --c6: #9c9c9c;
+  --c7: #717171;
+  --c8: #595959;
+  --c9: #404040;
+  --c10: #2e2e2e;
+  --c11: #111111;
+  --c12: #000000;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+img,
+input,
+button,
+a {
+  display: block;
+}
+
+button,
+a {
+  text-decoration: none;
+}
+
+ul,
+li {
+  list-style: none;
+  text-decoration: none;
+}
+
+.title-l {
+  font: var(--font-1-lxx-b);
+}
+
+.title-s {
+  font: var(--font-1-m-sb);
+  color: var(--c0);
+}
+
+.paragraph-m {
+  font: var(--font-2-s-r);
+  color: var(--c5);
+}
