@@ -1,0 +1,22 @@
+.container {
+  display: none;
+  position: relative;
+}
+
+.dropdown-menu-container {
+  position: absolute;
+  right: 0px;
+  top: 36px;
+  background-color: var(--c0);
+  border-radius: 0.3125rem;
+  padding: 1rem;
+  -webkit-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.5);
+  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.5);
+}
+
+@media (max-width: 768px) {
+  .container {
+    display: block;
+  }
+}
