@@ -1,0 +1,11 @@
+.content-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.child-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
