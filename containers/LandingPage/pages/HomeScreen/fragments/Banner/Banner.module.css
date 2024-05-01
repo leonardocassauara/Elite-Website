@@ -1,0 +1,20 @@
+.background-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 100vw;
+  background: var(--temp);
+}
+
+.content-container {
+  max-width: 1200px;
+  width: 100%;
+}
+
+.banner {
+  display: block;
+  object-fit: cover;
+  object-position: center;
+  width: 100%;
+  height: auto;
+}
