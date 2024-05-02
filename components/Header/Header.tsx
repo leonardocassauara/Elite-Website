@@ -9,7 +9,7 @@ export default function Header() {
   return (
     <header className={styles["background-container"]}>
       <div className={styles["main-container"]}>
-        <Logo width={60} height={54} />
+        <Logo width={60} height={54} priority />
         <Hamburguer
           children={
             <ul className={styles["column-container"]}>
