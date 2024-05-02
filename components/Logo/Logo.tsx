@@ -3,9 +3,10 @@ import Image from "next/image";
 type AppProps = {
   width: number;
   height: number;
+  priority?: boolean;
 };
 
-export default function Logo({ width, height, ...props }: AppProps) {
+export default function Logo({ width, height, priority }: AppProps) {
   return (
     <>
       <Image
@@ -13,7 +14,7 @@ export default function Logo({ width, height, ...props }: AppProps) {
         width={width}
         height={height}
         alt="Logo da Elite Auto Center"
-        {...props}
+        priority={priority}
       />
     </>
   );
