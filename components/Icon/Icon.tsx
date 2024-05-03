@@ -11,7 +11,7 @@ export default function Icon({ path, width, height, alt }: AppProps) {
   return (
     <>
       <Image
-        src={"/img/" + path + ".svg"}
+        src={"/svg/" + path + ".svg"}
         width={width}
         height={height}
         alt={alt}
