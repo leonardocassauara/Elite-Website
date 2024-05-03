@@ -19,7 +19,7 @@ export default function Hamburguer({ children }: AppProps) {
   return (
     <div className={styles["container"]}>
       <Image
-        src="/img/Hamburguer.svg"
+        src="/svg/Hamburguer.svg"
         width={24}
         height={24}
         alt="Menu hamburguer"
