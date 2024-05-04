@@ -1,0 +1,26 @@
+.pseudo::after {
+  content: "";
+  display: inline-block;
+  margin-left: 8px;
+  background-color: var(--p1);
+  border-radius: 5px;
+  width: 16px;
+  height: 53px;
+}
+
+.title {
+  font: var(--font-1-lxx-b);
+  padding-left: 1rem;
+}
+
+@media (max-width: 768px) {
+  .title {
+    display: flex;
+    align-items: center;
+    font: var(--font-1-m-sb);
+  }
+  .pseudo::after {
+    width: 10px;
+    height: 30px;
+  }
+}
