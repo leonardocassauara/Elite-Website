@@ -46,7 +46,10 @@ export default function Footer() {
                   </p>
                 );
             })}
-            <Link href="https://www.instagram.com/eliteautocenteroficial/?hl=pt-br">
+            <Link
+              href="https://www.instagram.com/eliteautocenteroficial/?hl=pt-br"
+              className={`${styles["icon-container"]}` + " " + "focusable"}
+            >
               <Icon width={32} height={32} path="instagram" alt="Instagram" />
             </Link>
           </FooterSection>
