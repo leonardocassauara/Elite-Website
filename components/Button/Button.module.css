@@ -21,5 +21,6 @@
 }
 
 .clean {
+  border-radius: 0.3125rem;
   border: none;
 }
