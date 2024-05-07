@@ -40,16 +40,40 @@ export default function Header() {
         <nav className={styles["nav-container"]}>
           <ul className={styles["row-container"]}>
             <li>
-              <Button text="Pneus" visual="clean" mode="link" href="./" />
+              <Button
+                text="Pneus"
+                visual="clean"
+                mode="link"
+                href="./"
+                style={{ padding: "0.375rem 0.75rem", whiteSpace: "nowrap" }}
+              />
             </li>
             <li>
-              <Button text="Peças" visual="clean" mode="link" href="./" />
+              <Button
+                text="Peças"
+                visual="clean"
+                mode="link"
+                href="./"
+                style={{ padding: "0.375rem 0.75rem", whiteSpace: "nowrap" }}
+              />
             </li>
             <li>
-              <Button text="Serviços" visual="clean" mode="link" href="./" />
+              <Button
+                text="Serviços"
+                visual="clean"
+                mode="link"
+                href="./"
+                style={{ padding: "0.375rem 0.75rem", whiteSpace: "nowrap" }}
+              />
             </li>
             <li>
-              <Button text="Contato" visual="clean" mode="link" href="./" />
+              <Button
+                text="Contato"
+                visual="clean"
+                mode="link"
+                href="./"
+                style={{ padding: "0.375rem 0.75rem", whiteSpace: "nowrap" }}
+              />
             </li>
             <li>
               <Button
