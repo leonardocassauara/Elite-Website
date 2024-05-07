@@ -9,10 +9,11 @@
   --font-2-m-b: 700 1.5rem/2.25rem var(--font-roboto), sans-serif;
   --font-2-s-b: 700 1rem/1.125rem var(--font-roboto), sans-serif;
   --font-2-s-r: 400 1rem/1.125rem var(--font-roboto), sans-serif;
+  --font-2-sx-r: 400 0.75rem/1rem var(--font-roboto), sans-serif;
   --p1: #f7d10c;
   --p2: #734c01;
   --p3: #038ad6;
-  --temp: #edb902;
+  --p4: #033b7c;
   --top-space: 5rem;
   --bot-space: 3.75rem;
   --g1: linear-gradient(var(--p1), #f3b107);
@@ -35,6 +36,18 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+}
+
+.activable:active {
+  background: var(--p3);
+  color: var(--p4);
+}
+
+.focusable:focus {
+  outline: none;
+  border-color: var(--p3);
+  box-shadow: 0 0 8px var(--p3);
+  border-radius: 0.3125rem;
 }
 
 img,
@@ -70,13 +83,4 @@ li {
     --top-space: 2.5rem;
     --bot-space: 2.5rem;
   }
-}
-
-.image {
-  display: block;
-  object-fit: cover;
-  object-position: center;
-  max-width: 100%;
-  height: auto;
-  width: auto;
 }
