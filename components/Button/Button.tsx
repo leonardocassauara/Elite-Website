@@ -25,7 +25,9 @@ export default function Button({
       <button
         type={type}
         onClick={onClick}
-        className={`${styles.button} ${styles[visual]}`}
+        className={
+          `${styles.button} ${styles[visual]}` + " " + "focusable activable"
+        }
         style={style}
       >
         {text}
@@ -35,7 +37,9 @@ export default function Button({
     return (
       <Link
         href={href}
-        className={`${styles.link} ${styles[visual]}`}
+        className={
+          `${styles.link} ${styles[visual]}` + " " + "focusable activable"
+        }
         style={style}
       >
         {text}
