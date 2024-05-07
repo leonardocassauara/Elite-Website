@@ -40,6 +40,14 @@
   border-radius: 0.3125rem;
 }
 
+.image {
+  object-fit: cover;
+  object-position: center;
+  max-width: 100%;
+  width: auto;
+  height: auto;
+}
+
 @media (max-width: 1024px) {
 }
 
