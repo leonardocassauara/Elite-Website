@@ -12,13 +12,13 @@ export default function ProductCard({ id, name, price }: AppProps) {
   return (
     <>
       <div id={id} className={styles["main-container"]}>
-        <Link href="./">
+        <Link href="./" className="focusable">
           <Image
             src="/img/product.png"
             width={318}
             height={345}
             alt="Produto em destaque"
-            className="image"
+            className={styles["image"]}
           />
           <div className={styles["text-container"]}>
             <div className={styles["content-container"]}>
