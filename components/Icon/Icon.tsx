@@ -1,4 +1,5 @@
 import Image from "next/image";
+import styles from "./Icon.module.css";
 
 type AppProps = {
   path: string;
@@ -15,6 +16,7 @@ export default function Icon({ path, width, height, alt }: AppProps) {
         width={width}
         height={height}
         alt={alt}
+        className={styles["icon"]}
       />
     </>
   );
