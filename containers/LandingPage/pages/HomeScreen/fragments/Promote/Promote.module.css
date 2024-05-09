@@ -1,0 +1,134 @@
+.background-container {
+  width: 100vw;
+  background-color: var(--c12);
+  display: flex;
+  justify-content: center;
+  gap: min(5vw, 5rem);
+  flex-wrap: nowrap;
+}
+
+.layout-container {
+  display: flex;
+  flex-direction: column;
+  padding-top: 5rem;
+  padding-bottom: 3.75rem;
+  justify-content: space-between;
+}
+
+.primary-content-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.pretitle {
+  font: var(--font-2-m-b);
+  color: var(--c5);
+  margin-bottom: 1.25rem;
+}
+
+.title {
+  font: var(--font-1-lxx-b);
+  color: var(--c0);
+  max-width: 19ch;
+  width: 100%;
+  margin-bottom: 1.25rem;
+}
+
+.description {
+  font: var(--font-2-m-r);
+  color: var(--c5);
+  max-width: 51ch;
+  width: 100%;
+  margin-bottom: 1.25rem;
+}
+
+.buttons-container {
+  display: flex;
+  gap: 1.625rem;
+  margin-bottom: 1.25rem;
+  flex-wrap: wrap;
+}
+
+.link-button {
+  border-radius: 0.3125rem;
+  background: var(--g1);
+  padding: 1rem 2rem;
+  font: var(--font-1-m-sb);
+  color: var(--p2);
+}
+
+.link-button:hover {
+  cursor: pointer;
+}
+
+.vantages-container {
+  display: flex;
+  gap: 2.25rem;
+}
+
+.vantage {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.vantage-title {
+  font: var(--font-1-m-sb);
+  color: var(--c0);
+}
+
+.vantage-description {
+  font: var(--font-2-s-r);
+  color: var(--c5);
+  max-width: 33ch;
+  width: 100%;
+}
+
+.image {
+  display: block;
+  object-fit: contain;
+  object-position: center;
+  height: 100%;
+  width: auto;
+  max-width: 100%;
+  max-height: 893px;
+}
+
+@media (max-width: 1024px) {
+  .image {
+    display: none;
+  }
+  .layout-container {
+    gap: 3.75rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .link-button {
+    padding: 0.5rem 1rem;
+    font: var(--font-1-s-sb);
+  }
+  .background-container {
+    padding: 1rem;
+  }
+  .pretitle {
+    font: var(--font-2-s-b);
+  }
+  .title {
+    font: var(--font-1-m-sb);
+    max-width: 25ch;
+  }
+  .description {
+    font: var(--font-2-s-r);
+  }
+  .vantage-title {
+    font: var(--font-1-s-sb);
+  }
+  .vantage-description {
+    font: var(--font-2-sx-r);
+  }
+  .layout-container {
+    padding-top: 2.5rem;
+    padding-bottom: 2.5rem;
+  }
+}
