@@ -10,8 +10,6 @@ export default function Highlight() {
     { id: "1", name: "Pneu Dunlop", price: "199" },
     { id: "2", name: "Pneu Strong", price: "199" },
     { id: "3", name: "Motor Aud", price: "1240" },
-    { id: "4", name: "Motor BMW", price: "1240" },
-    { id: "5", name: "Pneu Remold 150 60 87", price: "1240" },
   ];
 
   return (
