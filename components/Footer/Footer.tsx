@@ -61,7 +61,7 @@ export default function Footer() {
             ))}
           </FooterSection>
           <p className={"paragraph-m"} style={{ gridColumn: "1 / -1" }}>
-            Elite Auto Center. Alguns direitos reservados.
+            Elite Auto Center. Todos os direitos reservados.
           </p>
         </div>
       </footer>
