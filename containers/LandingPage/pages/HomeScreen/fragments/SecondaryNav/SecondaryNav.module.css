@@ -1,0 +1,37 @@
+.background-container {
+  background-color: var(--c0);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 80px;
+  padding-bottom: 60px;
+}
+
+.content-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2.5rem;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  padding: 4px 0px;
+}
+
+.content-container::-webkit-scrollbar {
+  display: none;
+}
+
+@media (max-width: 1024px) {
+  .content-container {
+    justify-content: initial;
+  }
+}
+
+@media (max-width: 768px) {
+  .content-container {
+    gap: 16px;
+  }
+  .background-container {
+    padding: 40px 0px;
+  }
+}
