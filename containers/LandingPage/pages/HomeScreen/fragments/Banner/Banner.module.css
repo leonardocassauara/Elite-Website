@@ -3,7 +3,7 @@
   justify-content: center;
   flex-wrap: wrap;
   width: 100vw;
-  background: var(--temp);
+  background: var(--p4);
 }
 
 .content-container {
