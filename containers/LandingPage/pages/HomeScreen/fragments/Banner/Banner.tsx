@@ -1,6 +1,7 @@
 import Image from "next/image";
 import styles from "./Banner.module.css";
 
+// TODO: avaliar uso do <picture> para imagem do banner em dispositivos móveis
 export default function Banner() {
   return (
     <>

@@ -2,7 +2,6 @@ import Image from "next/image";
 import Link from "next/link";
 import styles from "./MenuCard.module.css";
 
-// TODO: estilizar
 type AppProps = {
   src: string;
   text: string;
