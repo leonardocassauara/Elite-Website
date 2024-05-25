@@ -4,7 +4,7 @@ import Image from "next/image";
 
 export default function OurStores() {
   return (
-    <>
+    <section className={styles["background"]}>
       <div className={styles["background-container"]}>
         <div className={styles["title-container"]}>
           <Title text="NOSSAS UNIDADES" pseudo color="#ffffff" />
@@ -18,8 +18,8 @@ export default function OurStores() {
             </span>
             <Image
               src="/img/stores.png"
-              width={559}
-              height={740}
+              width={500}
+              height={662}
               alt="Unidade Areia Branca"
               className={styles["image"]}
             />
@@ -39,6 +39,6 @@ export default function OurStores() {
           </div>
         </div>
       </div>
-    </>
+    </section>
   );
 }

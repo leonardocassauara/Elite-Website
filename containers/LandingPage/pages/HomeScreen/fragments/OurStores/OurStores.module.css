@@ -1,8 +1,11 @@
 .background-container {
-  background-color: var(--c11);
   width: 100vw;
   display: flex;
   justify-content: center;
+}
+
+.background {
+  background-color: var(--c11);
 }
 
 .title-container {
@@ -25,7 +28,7 @@
   display: block;
   object-fit: cover;
   object-position: center;
-  max-width: 559px;
+  max-width: 500px;
   width: 100%;
   height: auto;
 }
