@@ -40,7 +40,7 @@
 
 .activable:active {
   background: var(--p3);
-  color: var(--p4);
+  color: var(--c0);
 }
 
 .focusable:focus {
