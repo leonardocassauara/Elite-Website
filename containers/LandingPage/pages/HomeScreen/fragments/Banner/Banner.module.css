@@ -3,7 +3,7 @@
   justify-content: center;
   flex-wrap: wrap;
   width: 100vw;
-  background: var(--p4);
+  background: radial-gradient(var(--c12) 20%, var(--c9) 130%);
 }
 
 .content-container {
