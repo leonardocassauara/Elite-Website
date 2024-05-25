@@ -21,6 +21,14 @@
   display: none;
 }
 
+.content-container:first-child {
+  padding-left: 16px;
+}
+
+.content-container:last-child {
+  padding-right: 16px;
+}
+
 @media (max-width: 1024px) {
   .content-container {
     justify-content: initial;
