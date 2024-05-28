@@ -22,7 +22,7 @@ export default function Header() {
               <Button text="Serviços" visual="clean" mode="link" href="./" />
             </li>
             <li>
-              <Button text="Contato" visual="clean" mode="link" href="./" />
+              <Button text="Contato" visual="clean" mode="link" href="/contato" />
             </li>
             <li>
               <Button
@@ -69,7 +69,7 @@ export default function Header() {
                 text="Contato"
                 visual="clean"
                 mode="link"
-                href="./"
+                href="/contato"
                 style={{ padding: "0.375rem 0.75rem", whiteSpace: "nowrap" }}
               />
             </li>
