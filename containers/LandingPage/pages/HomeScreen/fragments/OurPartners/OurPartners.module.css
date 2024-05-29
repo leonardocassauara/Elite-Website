@@ -1,6 +1,6 @@
 .background-container {
   background-color: var(--c0);
-  width: 100vw;
+  width: 100%;
   display: flex;
   justify-content: center;
 }

@@ -1,5 +1,5 @@
 .background-container {
-  width: 100vw;
+  width: 100%;
   background-color: var(--c12);
   display: flex;
   justify-content: center;
@@ -23,6 +23,7 @@
 .pretitle {
   font: var(--font-2-m-b);
   color: var(--c5);
+  letter-spacing: 0.5ch;
   margin-bottom: 1.25rem;
 }
 
