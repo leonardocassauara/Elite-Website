@@ -24,7 +24,7 @@
   font: var(--font-2-m-b);
   color: var(--c5);
   letter-spacing: 0.5ch;
-  margin-bottom: 1.25rem;
+  margin-bottom: 0.75rem;
 }
 
 .title {
@@ -32,7 +32,7 @@
   color: var(--c0);
   max-width: 19ch;
   width: 100%;
-  margin-bottom: 1.25rem;
+  margin-bottom: 0.5rem;
 }
 
 .description {
