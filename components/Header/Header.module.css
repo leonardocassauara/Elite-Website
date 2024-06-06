@@ -3,7 +3,7 @@
   width: 100%;
   display: flex;
   justify-content: center;
-  padding: 1rem;
+  padding: 0.75rem 1rem;
   position: sticky;
   top: 0;
   z-index: 1;
@@ -20,16 +20,6 @@
   align-items: center;
 }
 
-.nav-container {
-  display: block;
-}
-
-.row-container {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-}
-
 .column-container {
   display: flex;
   flex-direction: column;
@@ -38,10 +28,4 @@
 
 .column-container > li {
   width: fit-content;
-}
-
-@media (max-width: 768px) {
-  .nav-container {
-    display: none;
-  }
 }
