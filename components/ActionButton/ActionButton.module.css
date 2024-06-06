@@ -1,0 +1,23 @@
+.all {
+  border-radius: 0.3125rem;
+}
+
+.solid {
+  background-color: var(--g1);
+  color: var(--p2);
+  border: none;
+  padding: 1rem 2rem;
+  font: var(--font-1-m-sb);
+}
+
+.outline {
+  border: solid 1px var(--c12);
+  padding: 1rem 2rem;
+  font: var(--font-1-m-sb);
+}
+
+.clean {
+  border: none;
+  font: var(--font-1-s-sb);
+  color: var(--c12);
+}
