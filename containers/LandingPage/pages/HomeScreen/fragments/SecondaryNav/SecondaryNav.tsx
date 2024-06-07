@@ -3,7 +3,7 @@ import MenuCard from "@/components/MenuCard/MenuCard";
 
 export default function SecondaryNav() {
   return (
-    <nav className={styles["background-container"]}>
+    <nav id="secondary-nav" className={styles["background-container"]}>
       <div className={styles["content-container"]}>
         <MenuCard
           href="./"
