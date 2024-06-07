@@ -105,6 +105,7 @@
   }
   .description {
     font: var(--font-2-s-r);
+    max-width: 22ch;
   }
   .information-text {
     font: var(--font-2-sx-r);

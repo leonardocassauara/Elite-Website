@@ -121,6 +121,7 @@
   }
   .description {
     font: var(--font-2-s-r);
+    max-width: 25ch;
   }
   .vantage-title {
     font: var(--font-1-s-sb);
