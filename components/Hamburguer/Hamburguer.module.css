@@ -3,6 +3,26 @@
   position: relative;
 }
 
+.column-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.dropdown-menu-container[data-menu-active="false"] {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-20px);
+  transition: 500ms ease;
+}
+
+.dropdown-menu-container[data-menu-active="true"] {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+  transition: 500ms ease;
+}
+
 .dropdown-menu-container {
   position: absolute;
   right: 0px;
