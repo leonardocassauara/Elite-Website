@@ -19,13 +19,3 @@
   justify-content: space-between;
   align-items: center;
 }
-
-.column-container {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-}
-
-.column-container > li {
-  width: fit-content;
-}
