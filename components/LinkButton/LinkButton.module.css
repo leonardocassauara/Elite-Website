@@ -46,3 +46,8 @@
 .clean[data-active="false"]:hover::after {
   width: calc(100% - 24px);
 }
+
+.clean[data-hamburguer-active="true"],
+.clean[data-hamburguer-active="false"]:hover {
+  background-color: var(--c3);
+}
