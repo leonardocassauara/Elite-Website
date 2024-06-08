@@ -2,22 +2,43 @@
 
 import Image from "next/image";
 import styles from "./Hamburguer.module.css";
-import { useState } from "react";
+import LinkButton from "../LinkButton/LinkButton";
+import { useState, useEffect, useRef } from "react";
+import { usePathname } from "next/navigation";
 
-type AppProps = {
-  children: React.ReactNode;
-};
-
-export default function Hamburguer({ children }: AppProps) {
+export default function Hamburguer() {
   const [menu, setMenu] = useState(false);
+  const menuRef = useRef<HTMLDivElement>(null);
+  const hamburguerRef = useRef<HTMLImageElement>(null);
+  const pathName = usePathname();
 
-  function handleClick(event: any) {
+  function handleClick() {
     setMenu((menu) => !menu);
-    event.target.style.transform = menu ? "rotate(0deg)" : "rotate(90deg)";
   }
 
+  useEffect(() => {
+    let handler = (event: any) => {
+      if (!menuRef.current?.contains(event.target)) {
+        setMenu(false);
+      }
+    };
+
+    document.addEventListener("mousedown", handler);
+
+    return () => {
+      document.removeEventListener("mousedown", handler);
+    };
+  });
+
+  useEffect(() => {
+    if (hamburguerRef.current)
+      hamburguerRef.current.style.transform = menu
+        ? "rotate(90deg)"
+        : "rotate(0deg)";
+  }, [menu]);
+
   return (
-    <div className={styles["container"]}>
+    <div className={styles["container"]} ref={menuRef}>
       <Image
         src="/svg/Hamburguer.svg"
         width={24}
@@ -26,10 +47,64 @@ export default function Hamburguer({ children }: AppProps) {
         sizes="(max-width: 768px) 24px, 0px"
         onClick={handleClick}
         style={{ transition: "0.5s" }}
+        ref={hamburguerRef}
       />
-      {menu && (
-        <nav className={styles["dropdown-menu-container"]}>{children}</nav>
-      )}
+      <nav
+        className={styles["dropdown-menu-container"]}
+        data-menu-active={menu}
+      >
+        <ul className={styles["column-container"]}>
+          <li>
+            <LinkButton
+              visual="clean"
+              href="/#secondary-nav"
+              data-hamburguer-active={pathName == "/pneus"}
+              style={{ padding: "0.375rem 0.75rem", whiteSpace: "nowrap" }}
+            >
+              Pneus
+            </LinkButton>
+          </li>
+          <li>
+            <LinkButton
+              visual="clean"
+              href="./"
+              data-hamburguer-active={pathName == "./"}
+              style={{ padding: "0.375rem 0.75rem", whiteSpace: "nowrap" }}
+            >
+              Peças
+            </LinkButton>
+          </li>
+          <li>
+            <LinkButton
+              visual="clean"
+              href="./"
+              data-hamburguer-active={pathName == "./"}
+              style={{ padding: "0.375rem 0.75rem", whiteSpace: "nowrap" }}
+            >
+              Serviços
+            </LinkButton>
+          </li>
+          <li>
+            <LinkButton
+              visual="clean"
+              href="/contato"
+              data-hamburguer-active={pathName == "/contato"}
+              style={{ padding: "0.375rem 0.75rem", whiteSpace: "nowrap" }}
+            >
+              Contato
+            </LinkButton>
+          </li>
+          <li>
+            <LinkButton
+              visual="outline"
+              href="/"
+              style={{ padding: "0.375rem 0.75rem", whiteSpace: "nowrap" }}
+            >
+              Fale com um atendente
+            </LinkButton>
+          </li>
+        </ul>
+      </nav>
     </div>
   );
 }
