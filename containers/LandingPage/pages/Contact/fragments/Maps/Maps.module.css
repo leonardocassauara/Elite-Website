@@ -1,0 +1,126 @@
+.background-container {
+  width: 100%;
+  background: var(--c11);
+  display: flex;
+  justify-content: center;
+  padding-top: var(--top-space);
+  padding-bottom: var(--bot-space);
+}
+
+.content-container {
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.cards-container {
+  display: flex;
+  gap: 2rem;
+  max-width: 100%;
+  padding: 0px 16px;
+  justify-content: space-between;
+}
+
+.card {
+  border-radius: 0.3125rem;
+  background-color: var(--c10);
+  width: 100%;
+  max-width: 560px;
+}
+
+.iframe {
+  display: block;
+  border-radius: 0.3125rem 0.3125rem 0 0;
+  max-width: 100%;
+}
+
+.card-information {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin: 8px;
+  margin-left: 28px;
+}
+
+.title {
+  font: var(--font-1-m-sb);
+  color: var(--c0);
+  width: 100%;
+  max-width: 36ch;
+}
+
+.pseudo-element-container {
+  display: flex;
+  position: relative;
+}
+
+.pseudo-element-container::before {
+  content: "";
+  display: block;
+  width: 12px;
+  height: 20px;
+  border-radius: 0.3125rem;
+  background: var(--p1);
+  position: absolute;
+  top: 18px;
+  margin-left: 8px;
+}
+
+.card-description {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.card-description-item {
+  display: flex;
+  gap: 8px;
+}
+
+.card-description-text {
+  font: var(--font-2-s-b);
+  color: var(--c4);
+  padding-top: 3px;
+}
+
+.card-description-opening {
+  display: flex;
+  flex-direction: column;
+  margin-top: 8px;
+  margin-left: 20px;
+  gap: 4px;
+}
+
+.card-description-opening-text {
+  font: var(--font-2-s-r);
+  color: var(--c6);
+}
+
+@media (max-width: 1024px) {
+  .cards-container {
+    gap: 16px;
+  }
+}
+
+@media (max-width: 768px) {
+  .cards-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .title {
+    font: var(--font-1-s-sb);
+  }
+  .pseudo-element-container::before {
+    width: 8px;
+    height: 16px;
+    top: 13px;
+  }
+  .card-information {
+    margin-left: 24px;
+  }
+  .content-container {
+    gap: 20px;
+  }
+}
