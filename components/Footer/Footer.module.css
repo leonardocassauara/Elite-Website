@@ -31,6 +31,16 @@
   width: fit-content;
 }
 
+.description-text {
+  font: var(--font-2-s-r);
+  color: var(--c5);
+  transition: 500ms;
+}
+
+.description-text[href]:hover {
+  color: var(--c3);
+}
+
 @media (max-width: 1024px) {
   .logo {
     display: none;
