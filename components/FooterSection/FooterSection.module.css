@@ -9,3 +9,8 @@
   flex-direction: column;
   gap: 1.25rem;
 }
+
+.title {
+  font: var(--font-1-m-sb);
+  color: var(--c0);
+}
