@@ -12,6 +12,12 @@
   border: solid 1px var(--c12);
   color: var(--c12);
   font: var(--font-1-s-sb);
+  transition: 500ms;
+}
+
+.outline:hover {
+  background: var(--c12);
+  color: var(--p1);
 }
 
 .clean {
@@ -50,4 +56,10 @@
 .clean[data-hamburguer-active="true"],
 .clean[data-hamburguer-active="false"]:hover {
   background-color: var(--c3);
+}
+
+@media (max-width: 768px) {
+  .outline:hover {
+    color: var(--c0);
+  }
 }
