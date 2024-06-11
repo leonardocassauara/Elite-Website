@@ -68,16 +68,6 @@ li {
   text-decoration: none;
 }
 
-.title-s {
-  font: var(--font-1-m-sb);
-  color: var(--c0);
-}
-
-.paragraph-m {
-  font: var(--font-2-s-r);
-  color: var(--c5);
-}
-
 @media (max-width: 768px) {
   :root {
     --top-space: 2.5rem;
