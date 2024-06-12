@@ -9,7 +9,7 @@ export default function FooterSection({ title, children }: AppProps) {
   return (
     <>
       <section className={styles["content-container"]}>
-        <h3 className={"title-s"}>{title}</h3>
+        <h3 className={styles["title"]}>{title}</h3>
         <div className={styles["child-container"]}>{children}</div>
       </section>
     </>
