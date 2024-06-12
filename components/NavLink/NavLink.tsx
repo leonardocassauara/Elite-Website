@@ -3,6 +3,7 @@
 import styles from "./NavLink.module.css";
 import LinkButton from "../LinkButton/LinkButton";
 import { usePathname } from "next/navigation";
+import includesTire from "@/utils/includesTire";
 
 export default function NavLink() {
   const pathName = usePathname();
@@ -14,7 +15,7 @@ export default function NavLink() {
           <LinkButton
             visual="clean"
             href="/#secondary-nav"
-            data-active={pathName == "/pneus"}
+            data-active={includesTire(pathName)}
             style={{ padding: "0.375rem 0.75rem", whiteSpace: "nowrap" }}
           >
             Pneus
@@ -23,8 +24,8 @@ export default function NavLink() {
         <li>
           <LinkButton
             visual="clean"
-            href="./"
-            data-active={pathName == "./"}
+            href="/produtos/peças"
+            data-active={pathName == "/produtos/pe%C3%A7as"}
             style={{ padding: "0.375rem 0.75rem", whiteSpace: "nowrap" }}
           >
             Peças
@@ -33,8 +34,8 @@ export default function NavLink() {
         <li>
           <LinkButton
             visual="clean"
-            href="./"
-            data-active={pathName == "./"}
+            href="/produtos/serviços"
+            data-active={pathName == "/produtos/servi%C3%A7os"}
             style={{ padding: "0.375rem 0.75rem", whiteSpace: "nowrap" }}
           >
             Serviços

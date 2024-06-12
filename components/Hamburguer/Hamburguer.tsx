@@ -5,6 +5,7 @@ import styles from "./Hamburguer.module.css";
 import LinkButton from "../LinkButton/LinkButton";
 import { useState, useEffect, useRef } from "react";
 import { usePathname } from "next/navigation";
+import includesTire from "@/utils/includesTire";
 
 export default function Hamburguer() {
   const [menu, setMenu] = useState(false);
@@ -58,7 +59,7 @@ export default function Hamburguer() {
             <LinkButton
               visual="clean"
               href="/#secondary-nav"
-              data-hamburguer-active={pathName == "/pneus"}
+              data-hamburguer-active={includesTire(pathName)}
               style={{ padding: "0.375rem 0.75rem", whiteSpace: "nowrap" }}
             >
               Pneus
@@ -67,8 +68,8 @@ export default function Hamburguer() {
           <li>
             <LinkButton
               visual="clean"
-              href="./"
-              data-hamburguer-active={pathName == "./"}
+              href="/produtos/peças"
+              data-hamburguer-active={pathName == "/produtos/pe%C3%A7as"}
               style={{ padding: "0.375rem 0.75rem", whiteSpace: "nowrap" }}
             >
               Peças
@@ -77,8 +78,8 @@ export default function Hamburguer() {
           <li>
             <LinkButton
               visual="clean"
-              href="./"
-              data-hamburguer-active={pathName == "./"}
+              href="/produtos/serviços"
+              data-hamburguer-active={pathName == "/produtos/servi%C3%A7os"}
               style={{ padding: "0.375rem 0.75rem", whiteSpace: "nowrap" }}
             >
               Serviços
