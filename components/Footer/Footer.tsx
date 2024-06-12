@@ -4,15 +4,14 @@ import Icon from "../Icon/Icon";
 import Logo from "../Logo/Logo";
 import styles from "./Footer.module.css";
 
-// TODO: Links no Footer
-
 export default function Footer() {
   const infos = [
-    "Pneus Strong",
-    "Pneus Remold",
-    "Serviços",
-    "Contato",
-    "Peças",
+    { name: "Pneus Dunlop", href: "/produtos/dunlop" },
+    { name: "Pneus Strong", href: "/produtos/strong" },
+    { name: "Pneus Remold", href: "/produtos/remold" },
+    { name: "Serviços", href: "/produtos/serviços" },
+    { name: "Contato", href: "/contato" },
+    { name: "Peças", href: "/produtos/peças" },
   ];
   const contacts = [
     "+55 21 99999-9999",
@@ -33,7 +32,9 @@ export default function Footer() {
               if (index == 1 || index == 3)
                 return (
                   <p
-                    className={"paragraph-m" + " " + `${styles["pseudo"]}`}
+                    className={
+                      styles["description-text"] + " " + `${styles["pseudo"]}`
+                    }
                     key={index}
                   >
                     {contact}
@@ -41,7 +42,7 @@ export default function Footer() {
                 );
               else
                 return (
-                  <p className={"paragraph-m"} key={index}>
+                  <p className={styles["description-text"]} key={index}>
                     {contact}
                   </p>
                 );
@@ -54,13 +55,20 @@ export default function Footer() {
             </Link>
           </FooterSection>
           <FooterSection title="INFORMAÇÕES">
-            {infos.map((info, index) => (
-              <p className={"paragraph-m"} key={index}>
-                {info}
-              </p>
+            {infos.map(({ name, href }, index) => (
+              <Link
+                href={href}
+                className={styles["description-text"]}
+                key={index}
+              >
+                {name}
+              </Link>
             ))}
           </FooterSection>
-          <p className={"paragraph-m"} style={{ gridColumn: "1 / -1" }}>
+          <p
+            className={styles["description-text"]}
+            style={{ gridColumn: "1 / -1" }}
+          >
             Elite Auto Center. Todos os direitos reservados.
           </p>
         </div>
