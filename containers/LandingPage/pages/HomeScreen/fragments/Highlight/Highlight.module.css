@@ -25,6 +25,8 @@
   gap: 5rem;
   padding-left: 1rem;
   padding-right: 1rem;
+  max-width: 1200px;
+  width: 100%;
 }
 
 @media (max-width: 1024px) {
