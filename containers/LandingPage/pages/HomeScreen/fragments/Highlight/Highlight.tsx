@@ -26,7 +26,15 @@ export default function Highlight() {
       >
         <div className={styles["card-container"]}>
           {data.map(({ id, name, price }) => {
-            return <ProductCard key={id} id={id} name={name} price={price} />;
+            return (
+              <ProductCard
+                href={"./" + id + "/" + name}
+                key={id}
+                id={id}
+                name={name}
+                price={price}
+              />
+            );
           })}
         </div>
       </div>
