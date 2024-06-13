@@ -6,13 +6,14 @@ type AppProps = {
   id: string;
   name: string;
   price: string;
+  href: string;
 };
 
-export default function ProductCard({ id, name, price }: AppProps) {
+export default function ProductCard({ id, name, price, href }: AppProps) {
   return (
     <>
       <div id={id} className={styles["main-container"]}>
-        <Link href="./" className="focusable">
+        <Link href={href} className="focusable">
           <Image
             src="/img/product.png"
             width={318}
