@@ -1,0 +1,44 @@
+.floating-button {
+  display: block;
+  padding: 0.625rem;
+  background-color: #15960c;
+  border-radius: 50%;
+  position: fixed;
+  bottom: 1rem;
+  right: 1rem;
+  transition: 500ms;
+  animation-name: move;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+}
+
+.floating-button:hover {
+  transform: scale(1.1);
+  animation-play-state: paused;
+}
+
+@keyframes move {
+  0% {
+    right: 1rem;
+  }
+  50% {
+    right: 1.5rem;
+  }
+  100% {
+    right: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  @keyframes move {
+    0% {
+      right: 1rem;
+    }
+    50% {
+      right: 1.25rem;
+    }
+    100% {
+      right: 1rem;
+    }
+  }
+}
