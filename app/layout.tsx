@@ -3,6 +3,7 @@ import { Oswald, Roboto } from "next/font/google";
 import "@/styles/globals.css";
 import Header from "@/components/Header/Header";
 import Footer from "@/components/Footer/Footer";
+import Whatsapp from "@/components/Whatsapp/Whatsapp";
 
 const oswald = Oswald({
   subsets: ["latin"],
@@ -36,6 +37,7 @@ export default function RootLayout({
       <body style={{ maxWidth: "100%" }}>
         <Header />
         {children}
+        <Whatsapp />
         <Footer />
       </body>
     </html>
