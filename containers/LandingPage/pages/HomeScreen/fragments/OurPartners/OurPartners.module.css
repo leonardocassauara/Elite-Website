@@ -8,17 +8,17 @@
 .title-container {
   max-width: 1200px;
   padding-top: var(--top-space);
-  padding-bottom: 40px;
+  padding-bottom: 2.5rem;
   width: 100%;
 }
 
 .partners-container {
   display: flex;
-  gap: 40px;
+  gap: 2.5rem;
   padding-bottom: var(--bot-space);
   justify-content: center;
-  padding-left: 16px;
-  padding-right: 16px;
+  padding-left: 1rem;
+  padding-right: 1rem;
   flex-wrap: nowrap;
 }
 
@@ -33,34 +33,34 @@
 .partners-container .image-container:nth-child(even)::before {
   content: "";
   display: inline-block;
-  width: 2px;
+  width: 0.125rem;
   height: 100%;
   background-color: var(--c3);
-  border-radius: 5px;
+  border-radius: 0.3125rem;
   position: absolute;
-  left: -20px;
+  left: -1.25rem;
 }
 
 .image {
   display: block;
   object-fit: contain;
   object-position: center;
-  max-width: 257px;
+  max-width: 16.0625rem;
   width: 100%;
   height: auto;
 }
 
 @media (max-width: 768px) {
   .title-container {
-    padding-bottom: 20px;
+    padding-bottom: 1.25rem;
   }
   .image {
-    max-width: 144px;
+    max-width: 9rem;
   }
   .partners-container {
-    gap: 20px;
+    gap: 1.25rem;
   }
   .partners-container .image-container:nth-child(even)::before {
-    left: -10px;
+    left: -0.625rem;
   }
 }

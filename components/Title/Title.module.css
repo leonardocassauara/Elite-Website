@@ -1,7 +1,7 @@
 .pseudo {
   display: inline-block;
   width: 100%;
-  max-width: 76px;
+  max-width: 4.75rem;
   height: auto;
 }
 
@@ -22,7 +22,7 @@
     font: var(--font-1-m-sb);
   }
   .pseudo {
-    max-width: 31px;
+    max-width: 1.9375rem;
   }
   .pseudo-container {
     gap: 0.5rem;

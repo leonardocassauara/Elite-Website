@@ -12,7 +12,7 @@
   max-width: 1200px;
   width: 100%;
   padding-top: var(--top-space);
-  padding-bottom: 40px;
+  padding-bottom: 2.5rem;
 }
 
 .image-container {
@@ -20,15 +20,15 @@
   justify-content: center;
   gap: var(--top-space);
   padding-bottom: var(--bot-space);
-  padding-left: 16px;
-  padding-right: 16px;
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 
 .image {
   display: block;
   object-fit: cover;
   object-position: center;
-  max-width: 500px;
+  max-width: 31.25rem;
   width: 100%;
   height: auto;
 }
@@ -39,25 +39,25 @@
 
 .pseudo {
   background: var(--g1);
-  border-radius: 0px 5px 5px 0px;
+  border-radius: 0px 0.3125rem 0.3125rem 0px;
   color: var(--c12);
   font: var(--font-1-s-sb);
-  padding: 6px 12px;
+  padding: 0.375rem 0.75rem;
   display: inline-block;
   max-width: 28ch;
   position: absolute;
-  top: 26px;
-  left: 0px;
+  top: 1.625rem;
+  left: 0rem;
 }
 
 @media (max-width: 768px) {
   .title-container {
-    padding-bottom: 20px;
+    padding-bottom: 1.25rem;
   }
   .image-container {
     flex-direction: column;
   }
   .image {
-    max-height: 416px;
+    max-height: 26rem;
   }
 }

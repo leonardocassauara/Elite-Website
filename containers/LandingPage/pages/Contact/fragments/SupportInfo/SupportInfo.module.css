@@ -22,7 +22,7 @@
   font: var(--font-2-m-b);
   color: var(--c8);
   letter-spacing: 0.5ch;
-  margin-bottom: 12px;
+  margin-bottom: 0.75rem;
 }
 
 .title {
@@ -30,7 +30,7 @@
   max-width: 18ch;
   font: var(--font-1-lxx-b);
   color: var(--c12);
-  margin-bottom: 8px;
+  margin-bottom: 0.5rem;
 }
 
 .description {
@@ -38,14 +38,14 @@
   color: var(--c8);
   max-width: 32ch;
   width: 100%;
-  margin-bottom: 20px;
+  margin-bottom: 1.25rem;
 }
 
 .link-button {
   border-radius: 0.3125rem;
   background: var(--g1);
   padding: 1rem 2rem;
-  margin-bottom: 40px;
+  margin-bottom: 2.5rem;
   font: var(--font-1-m-sb);
   color: var(--p2);
   width: fit-content;
@@ -59,7 +59,7 @@
   display: block;
   width: auto;
   height: 100%;
-  max-height: 696px;
+  max-height: 43.5rem;
   object-fit: contain;
   object-position: center;
 }
@@ -68,14 +68,14 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   justify-content: space-between;
-  row-gap: 24px;
+  row-gap: 1.5rem;
   padding-bottom: var(--bot-space);
 }
 
 .information {
   display: flex;
   width: fit-content;
-  gap: 8px;
+  gap: 0.5rem;
   align-items: center;
 }
 
@@ -94,7 +94,7 @@
   .link-button {
     padding: 0.5rem 1rem;
     font: var(--font-1-s-sb);
-    margin-bottom: 24px;
+    margin-bottom: 1.5rem;
   }
   .pretitle {
     font: var(--font-2-s-b);
@@ -112,6 +112,6 @@
   }
   .information-container {
     grid-template-columns: 1fr;
-    row-gap: 12px;
+    row-gap: 0.75rem;
   }
 }

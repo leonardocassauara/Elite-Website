@@ -90,9 +90,6 @@
   display: block;
   object-fit: contain;
   object-position: center;
-  /* height: 100%;
-  width: auto;
-  max-height: 893px; */
   max-width: 562px;
   width: 100%;
   height: auto;
