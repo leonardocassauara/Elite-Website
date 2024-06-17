@@ -1,7 +1,9 @@
+import Product from "@/containers/ProductsPage/pages/Product/Product";
+
 export default function Produto({
   params,
 }: {
   params: { id: string; nome: string };
 }) {
-  return <div>{params.id + params.nome}</div>;
+  return <Product id={params.id} />;
 }
