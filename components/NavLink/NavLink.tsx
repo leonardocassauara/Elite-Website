@@ -54,8 +54,9 @@ export default function NavLink() {
         <li>
           <LinkButton
             visual="outline"
-            href="/"
+            href="https://api.whatsapp.com/send/?phone=5521968804228&text&type=phone_number&app_absent=0"
             style={{ padding: "0.375rem 0.75rem" }}
+            target="_blank"
           >
             Fale com um atendente
           </LinkButton>
