@@ -15,10 +15,11 @@ export default function SupportInfo() {
               nos contatar.
             </p>
             <Link
-              href="./"
+              href="https://api.whatsapp.com/send/?phone=5521968804228&text&type=phone_number&app_absent=0"
               className={
                 `${styles["link-button"]}` + " " + "focusable activable"
               }
+              target="_blank"
             >
               FALE COM UM ATENDENTE
             </Link>
