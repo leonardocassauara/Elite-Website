@@ -1,16 +1,11 @@
 import Title from "@/components/Title/Title";
 import styles from "./Highlight.module.css";
 import ProductCard from "@/components/ProductCard/ProductCard";
+import { highlightProducts } from "@/data/highlightProducts";
 
 // TODO: Substituir mock por um read do realtime database do Firebase
-
 export default function Highlight() {
-  // * Mock
-  const data = [
-    { id: "1", name: "Pneu Dunlop", price: "199" },
-    { id: "2", name: "Pneu Strong", price: "199" },
-    { id: "3", name: "Motor Aud", price: "1240" },
-  ];
+  const data = highlightProducts;
 
   return (
     <>
