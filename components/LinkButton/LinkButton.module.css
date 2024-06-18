@@ -3,9 +3,12 @@
 }
 
 .solid {
-  background-color: var(--g1);
+  background: var(--g1);
   color: var(--p2);
   border: none;
+  font: var(--font-1-m-sb);
+  padding: 1rem 2rem;
+  width: fit-content;
 }
 
 .outline {
@@ -61,5 +64,9 @@
 @media (max-width: 768px) {
   .outline:hover {
     color: var(--c0);
+  }
+  .solid {
+    padding: 0.75rem 1.5rem;
+    font: var(--font-1-s-sb);
   }
 }
