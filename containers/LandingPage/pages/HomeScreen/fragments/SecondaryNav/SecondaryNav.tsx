@@ -6,31 +6,31 @@ export default function SecondaryNav() {
     <nav id="secondary-nav" className={styles["background-container"]}>
       <div className={styles["content-container"]}>
         <MenuCard
-          href="./"
+          href="/produtos/remold"
           text="PNEUS REMOLD"
           src="/img/second menu.png"
           alt="Navegação Pneu Remold"
         />
         <MenuCard
-          href="./"
+          href="/produtos/dunlop"
           text="PNEUS DUNLOP"
           src="/img/second menu.png"
           alt="Navegação Pneu Dunlop"
         />
         <MenuCard
-          href="./"
+          href="/produtos/strong"
           text="PNEUS STRONG"
           src="/img/second menu.png"
           alt="Navegação Pneu Strong"
         />
         <MenuCard
-          href="./"
+          href="/produtos/peças"
           text="PEÇAS"
           src="/img/second menu.png"
           alt="Navegação Peças"
         />
         <MenuCard
-          href="./"
+          href="/produtos/serviços"
           text="SERVIÇOS"
           src="/img/second menu.png"
           alt="Navegação Serviços"
