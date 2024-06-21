@@ -1,0 +1,27 @@
+.controls-container {
+  display: flex;
+  justify-content: center;
+  margin-top: var(--bot-space);
+  margin-bottom: -1.25rem;
+  gap: 1rem;
+}
+
+.image:hover {
+  cursor: pointer;
+}
+
+.image[data-disabled="true"] {
+  visibility: hidden;
+}
+
+.inverted-arrow {
+  transform: scaleX(-1);
+}
+
+.page-number-text {
+  font: var(--font-2-s-b);
+  color: var(--c12);
+  border-radius: 0.3125rem;
+  border: 1px solid var(--c12);
+  padding: 0.25rem 0.375rem;
+}
