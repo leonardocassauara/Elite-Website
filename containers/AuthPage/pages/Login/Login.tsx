@@ -2,7 +2,7 @@ import Form from "./fragments/Form/Form";
 
 export default function Login() {
   return (
-    <article>
+    <article aria-label="Login">
       <Form />
     </article>
   );

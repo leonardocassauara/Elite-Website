@@ -9,7 +9,7 @@ export default function NavLink() {
   const pathName = usePathname();
 
   return (
-    <nav className={styles["nav-container"]}>
+    <nav className={styles["nav-container"]} aria-label="primária">
       <ul className={styles["row-container"]}>
         <li>
           <LinkButton

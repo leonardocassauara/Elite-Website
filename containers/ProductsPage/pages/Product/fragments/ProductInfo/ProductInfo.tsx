@@ -30,7 +30,7 @@ export default function ProductInfo({ id }: AppProps) {
   };
 
   return (
-    <div className={styles["background-container"]}>
+    <section className={styles["background-container"]} aria-label={data.name}>
       <div className={styles["content-container"]}>
         <Image
           src="/img/product.png"
@@ -52,9 +52,9 @@ export default function ProductInfo({ id }: AppProps) {
           </LinkButton>
         </div>
         <div className={styles["card-container"]}>
-          {Object.entries(data.technical).map(([key, value]) => {
+          {Object.entries(data.technical).map(([key, value], index) => {
             return (
-              <div className={styles["card-item-container"]}>
+              <div key={index} className={styles["card-item-container"]}>
                 <p className={styles["card-key"]}>{toTitle(key)}</p>
                 <p className={styles["card-value"]}>{value}</p>
               </div>
@@ -62,6 +62,6 @@ export default function ProductInfo({ id }: AppProps) {
           })}
         </div>
       </div>
-    </div>
+    </section>
   );
 }

@@ -36,8 +36,10 @@ export default function RootLayout({
       </head>
       <body style={{ maxWidth: "100%" }}>
         <Header />
-        {children}
-        <Whatsapp />
+        <main>{children}</main>
+        <aside>
+          <Whatsapp />
+        </aside>
         <Footer />
       </body>
     </html>

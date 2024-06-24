@@ -8,9 +8,9 @@ type AppProps = {
 
 export default function Products({ category, searchParams }: AppProps) {
   return (
-    <>
+    <article aria-label={"Catálogo de " + category}>
       <Banner text={category.toUpperCase()} />
       <ProductsWrapper category={category} searchParams={searchParams} />
-    </>
+    </article>
   );
 }

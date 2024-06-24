@@ -4,10 +4,10 @@ import SupportInfo from "./fragments/SupportInfo/SupportInfo";
 
 export default function Contact() {
   return (
-    <>
+    <article aria-label="Contato">
       <Banner />
       <SupportInfo />
       <Maps />
-    </>
+    </article>
   );
 }

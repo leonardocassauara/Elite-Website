@@ -4,10 +4,15 @@ import Image from "next/image";
 
 export default function OurPartners() {
   return (
-    <>
+    <section aria-labelledby="title-partners">
       <div className={styles["background-container"]}>
         <div className={styles["title-container"]}>
-          <Title text="NOSSOS PARCEIROS" pseudo color="#000000" />
+          <Title
+            id="title-partners"
+            text="NOSSOS PARCEIROS"
+            pseudo
+            color="#000000"
+          />
         </div>
       </div>
       <div className={styles["background-container"]}>
@@ -32,6 +37,6 @@ export default function OurPartners() {
           </div>
         </div>
       </div>
-    </>
+    </section>
   );
 }

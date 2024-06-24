@@ -4,12 +4,14 @@ import Link from "next/link";
 
 export default function SupportInfo() {
   return (
-    <>
+    <section aria-labelledby="title">
       <div className={styles["background-container"]}>
         <div className={styles["content-container"]}>
           <div className={styles["text-container"]}>
             <p className={styles["pretitle"]}>SUPORTE</p>
-            <h1 className={styles["title"]}>NOS CONTATE SEMPRE QUE PRECISAR</h1>
+            <h1 id="title" className={styles["title"]}>
+              NOS CONTATE SEMPRE QUE PRECISAR
+            </h1>
             <p className={styles["description"]}>
               Surgiu alguma dúvida sobre algum serviço ou produto? Não hesite em
               nos contatar.
@@ -73,6 +75,6 @@ export default function SupportInfo() {
           />
         </div>
       </div>
-    </>
+    </section>
   );
 }

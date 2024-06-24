@@ -4,10 +4,15 @@ import Image from "next/image";
 
 export default function OurStores() {
   return (
-    <section className={styles["background"]}>
+    <section className={styles["background"]} aria-labelledby="title-stores">
       <div className={styles["background-container"]}>
         <div className={styles["title-container"]}>
-          <Title text="NOSSAS UNIDADES" pseudo color="#ffffff" />
+          <Title
+            id="title-stores"
+            text="NOSSAS UNIDADES"
+            pseudo
+            color="#ffffff"
+          />
         </div>
       </div>
       <div className={styles["background-container"]}>

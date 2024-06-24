@@ -7,13 +7,13 @@ import OurPartners from "./fragments/OurPartners/OurPartners";
 
 export default function HomeScreen() {
   return (
-    <>
+    <article aria-label="Início">
       <Banner />
       <Highlight />
       <Promote />
       <SecondaryNav />
       <OurStores />
       <OurPartners />
-    </>
+    </article>
   );
 }

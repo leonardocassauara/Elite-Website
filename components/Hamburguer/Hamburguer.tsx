@@ -39,7 +39,7 @@ export default function Hamburguer() {
   }, [menu]);
 
   return (
-    <div className={styles["container"]} ref={menuRef}>
+    <section className={styles["container"]} ref={menuRef} aria-label="menu">
       <Image
         src="/svg/Hamburguer.svg"
         width={24}
@@ -53,6 +53,7 @@ export default function Hamburguer() {
       <nav
         className={styles["dropdown-menu-container"]}
         data-menu-active={menu}
+        aria-label="primária"
       >
         <ul className={styles["column-container"]}>
           <li>
@@ -107,6 +108,6 @@ export default function Hamburguer() {
           </li>
         </ul>
       </nav>
-    </div>
+    </section>
   );
 }

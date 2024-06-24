@@ -5,7 +5,10 @@ import Icon from "@/components/Icon/Icon";
 
 export default function Promote() {
   return (
-    <article className={styles["background-container"]}>
+    <section
+      className={styles["background-container"]}
+      aria-labelledby="title-promote"
+    >
       <Image
         className={styles["image"]}
         src="/img/mid vertical banner.png"
@@ -16,7 +19,7 @@ export default function Promote() {
       <section className={styles["layout-container"]}>
         <div className={styles["primary-content-container"]}>
           <p className={styles["pretitle"]}>PREMIUM</p>
-          <h1 className={styles["title"]}>
+          <h1 id="title-promote" className={styles["title"]}>
             PRODUTOS DE ELITE A PREÇOS IRRESISTÍVEIS
           </h1>
           <p className={styles["description"]}>
@@ -63,6 +66,6 @@ export default function Promote() {
           </section>
         </div>
       </section>
-    </article>
+    </section>
   );
 }

@@ -20,7 +20,10 @@ const cards = [
 
 export default function Maps() {
   return (
-    <div className={styles["background-container"]}>
+    <section
+      className={styles["background-container"]}
+      aria-label="Nossas unidades"
+    >
       <div className={styles["content-container"]}>
         <Title text="NOS VISITE" pseudo color="#ffffff" />
         <div className={styles["cards-container"]}>
@@ -89,6 +92,6 @@ export default function Maps() {
           })}
         </div>
       </div>
-    </div>
+    </section>
   );
 }

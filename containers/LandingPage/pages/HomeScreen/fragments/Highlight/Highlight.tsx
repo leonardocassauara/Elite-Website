@@ -8,12 +8,12 @@ export default function Highlight() {
   const data = highlightProducts;
 
   return (
-    <>
+    <section aria-labelledby="title-highlight">
       <div
         className={`${styles["background-container"]} + " " + ${styles["top"]}`}
       >
         <div className={styles["title-container"]}>
-          <Title text="PROMOÇÕES" color="#000000" pseudo />
+          <Title id="title-highlight" text="PROMOÇÕES" color="#000000" pseudo />
         </div>
       </div>
       <div
@@ -33,6 +33,6 @@ export default function Highlight() {
           })}
         </div>
       </div>
-    </>
+    </section>
   );
 }

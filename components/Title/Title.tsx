@@ -5,13 +5,19 @@ type AppProps = {
   text: string;
   pseudo?: boolean;
   color: "#000000" | "#ffffff";
+  [props: string]: any;
 };
 
-export default function Title({ text, pseudo = false, color }: AppProps) {
+export default function Title({
+  text,
+  pseudo = false,
+  color,
+  ...props
+}: AppProps) {
   if (pseudo)
     return (
       <div className={styles["pseudo-container"]}>
-        <h1 className={styles["title"]} style={{ color: color }}>
+        <h1 className={styles["title"]} style={{ color: color }} {...props}>
           {text}
         </h1>
         <Image

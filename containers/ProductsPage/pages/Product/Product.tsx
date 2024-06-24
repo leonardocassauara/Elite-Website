@@ -6,8 +6,8 @@ type AppProps = {
 
 export default function Product({ id }: AppProps) {
   return (
-    <>
+    <article aria-label="Produto">
       <ProductInfo id={id} />
-    </>
+    </article>
   );
 }
