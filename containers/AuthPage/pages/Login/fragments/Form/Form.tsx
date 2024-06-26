@@ -7,6 +7,11 @@ import { z } from "zod";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import ActionButton from "@/components/ActionButton/ActionButton";
+import { useEffect, useState } from "react";
+import { onAuthStateChanged, signInWithEmailAndPassword } from "firebase/auth";
+import { auth } from "@/services/firebase";
+import { useRouter } from "next/navigation";
+import Spinner from "@/components/Spinner/Spinner";
 
 const schema = z.object({
   userName: z.string().min(1, { message: "Campo obrigatório." }),
@@ -15,7 +20,6 @@ const schema = z.object({
 
 type FormDataProps = z.infer<typeof schema>;
 
-// TODO: adicionar firebase auth no handleSubmit
 export default function Form() {
   const {
     register,
@@ -28,9 +32,27 @@ export default function Form() {
     },
     resolver: zodResolver(schema),
   });
+  const [loading, setLoading] = useState(false);
+  const [wrongCredentials, setWrongCredentials] = useState(false);
+  const router = useRouter();
 
-  function handleSubmitForm(data: FormDataProps) {
-    console.log(data);
+  useEffect(() => {
+    const isAuth = onAuthStateChanged(auth, (user) => {
+      if (user) router.push("/");
+    });
+    return () => isAuth();
+  }, [loading]);
+
+  async function handleSubmitForm(data: FormDataProps) {
+    try {
+      setLoading(true);
+      await signInWithEmailAndPassword(auth, data.userName, data.password);
+    } catch (e: any) {
+      console.error("Falha: credenciais de login inválidas.");
+      setWrongCredentials(true);
+    } finally {
+      setLoading(false);
+    }
   }
 
   return (
@@ -44,11 +66,16 @@ export default function Form() {
       />
 
       <div className={styles["content-container"]}>
+        {loading && (
+          <div className={styles["spinner"]}>
+            <Spinner />
+          </div>
+        )}
         <form
           onSubmit={handleSubmit(handleSubmitForm)}
           className={styles["form"]}
         >
-          <Logo width={80} height={74} />
+          <Logo width={80} height={74} clickable={false} />
           <div className={styles["form-field"]}>
             <label className={styles["label"]} htmlFor="userName">
               Usuário
@@ -58,6 +85,7 @@ export default function Form() {
               type="text"
               id="userName"
               placeholder="Usuário"
+              autoComplete="username"
               {...register("userName")}
             />
             {errors.userName && (
@@ -74,14 +102,17 @@ export default function Form() {
               type="password"
               id="password"
               placeholder="Senha"
+              autoComplete="current-password"
               {...register("password")}
             />
             {errors.password && (
               <p className={styles["error"]}>{errors.password.message}</p>
             )}
           </div>
-
-          <ActionButton visual="solid" type="submit">
+          {wrongCredentials && (
+            <p className={styles["error"]}>Usuário ou senha inválidos.</p>
+          )}
+          <ActionButton visual="solid" type="submit" disabled={loading}>
             ENTRAR
           </ActionButton>
         </form>
