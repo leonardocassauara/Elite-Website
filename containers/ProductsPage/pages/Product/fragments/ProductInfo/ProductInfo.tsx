@@ -40,7 +40,7 @@ export default function ProductInfo({ id }: AppProps) {
           className={styles["image"]}
         />
         <div className={styles["content-info-container"]}>
-          <p className={styles["title"]}>{data.name.toUpperCase()}</p>
+          <h1 className={styles["title"]}>{data.name.toUpperCase()}</h1>
           <p className={styles["price"]}>
             {"R$ " + data.price.replace(".", ",")}
           </p>
@@ -51,15 +51,18 @@ export default function ProductInfo({ id }: AppProps) {
             FALE COM UM ATENDENTE
           </LinkButton>
         </div>
-        <div className={styles["card-container"]}>
-          {Object.entries(data.technical).map(([key, value], index) => {
-            return (
-              <div key={index} className={styles["card-item-container"]}>
-                <p className={styles["card-key"]}>{toTitle(key)}</p>
-                <p className={styles["card-value"]}>{value}</p>
-              </div>
-            );
-          })}
+        <div className={styles["technical-section"]}>
+          <h2 className={styles["sub-title"]}>FICHA TÉCNICA</h2>
+          <div className={styles["card-container"]}>
+            {Object.entries(data.technical).map(([key, value], index) => {
+              return (
+                <div key={index} className={styles["card-item-container"]}>
+                  <p className={styles["card-key"]}>{toTitle(key)}</p>
+                  <p className={styles["card-value"]}>{value}</p>
+                </div>
+              );
+            })}
+          </div>
         </div>
       </div>
     </section>
