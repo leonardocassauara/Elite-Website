@@ -17,6 +17,7 @@
 .title-container {
   max-width: 1200px;
   width: 100%;
+  position: relative;
 }
 
 .card-container {
