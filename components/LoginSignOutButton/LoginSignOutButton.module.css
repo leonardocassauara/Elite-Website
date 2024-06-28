@@ -1,0 +1,20 @@
+.description-text {
+  font: var(--font-2-s-r);
+  color: var(--c5);
+  transition: 500ms;
+}
+
+.description-text[href]:hover {
+  color: var(--c3);
+}
+
+.action-button {
+  border: none;
+  text-align: left;
+  background: transparent;
+  cursor: pointer;
+}
+
+.action-button:hover {
+  color: var(--c3);
+}
