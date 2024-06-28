@@ -1,0 +1,14 @@
+.admin-edit-link {
+  border-radius: 50%;
+  background-color: var(--c10);
+  padding: 0.5rem;
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 1rem;
+  transform: 500ms;
+}
+
+.admin-edit-link:hover {
+  background-color: var(--c9);
+}
