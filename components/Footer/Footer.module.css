@@ -41,6 +41,12 @@
   color: var(--c3);
 }
 
+.inline-link {
+  display: inline;
+  color: var(--c5);
+  text-decoration: underline;
+}
+
 @media (max-width: 1024px) {
   .logo {
     display: none;
