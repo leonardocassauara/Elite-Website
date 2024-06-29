@@ -44,6 +44,18 @@
   margin-bottom: 2rem;
 }
 
+.technical-section {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  margin-top: 1rem;
+}
+
+.sub-title {
+  font: var(--font-1-l-sb);
+  color: var(--c0);
+}
+
 .card-container {
   background-color: var(--c10);
   border-radius: 0.3125rem;
@@ -52,7 +64,6 @@
   gap: 0.625rem;
   width: 100%;
   padding: 1rem;
-  margin-top: 1rem;
 }
 
 .card-item-container {
@@ -102,7 +113,7 @@
   .price {
     font: var(--font-2-m-b);
   }
-  .card-container {
-    margin-top: 0px;
+  .sub-title {
+    font: var(--font-1-m-sb);
   }
 }
