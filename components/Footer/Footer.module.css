@@ -44,7 +44,6 @@
 .inline-link {
   display: inline;
   color: var(--c5);
-  text-decoration: underline;
 }
 
 @media (max-width: 1024px) {
