@@ -3,7 +3,6 @@
 import useByAuth from "@/hooks/useByAuth";
 import styles from "./LoginSignOutButton.module.css";
 import ActionButton from "../ActionButton/ActionButton";
-import LinkButton from "../LinkButton/LinkButton";
 import firebaseSignOut from "@/utils/firebaseSignOut";
 
 export default function LoginSignOutButton() {
@@ -23,13 +22,5 @@ export default function LoginSignOutButton() {
       </ActionButton>
     );
 
-  return (
-    <LinkButton
-      visual="clean"
-      href="/login"
-      className={styles["description-text"]}
-    >
-      Login
-    </LinkButton>
-  );
+  return;
 }

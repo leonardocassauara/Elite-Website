@@ -3,8 +3,6 @@ import FooterSection from "../FooterSection/FooterSection";
 import Icon from "../Icon/Icon";
 import Logo from "../Logo/Logo";
 import styles from "./Footer.module.css";
-import ActionButton from "../ActionButton/ActionButton";
-import LinkButton from "../LinkButton/LinkButton";
 import LoginSignOutButton from "../LoginSignOutButton/LoginSignOutButton";
 
 const infos = [

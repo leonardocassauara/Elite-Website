@@ -61,7 +61,7 @@ export default function Form() {
         src="/img/login side banner.png"
         alt="Banner de login"
         width={700}
-        height={1024}
+        height={650}
         className={styles["image"]}
       />
 
