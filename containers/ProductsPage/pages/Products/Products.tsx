@@ -9,7 +9,7 @@ type AppProps = {
 export default function Products({ category, searchParams }: AppProps) {
   return (
     <article aria-label={"Catálogo de " + category}>
-      <Banner text={category.toUpperCase()} />
+      <Banner text={category.toUpperCase().replaceAll("-", " ")} />
       <ProductsWrapper category={category} searchParams={searchParams} />
     </article>
   );
