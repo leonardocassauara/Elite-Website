@@ -15,3 +15,5 @@ export default async function categoryProducts() {
     };
   });
 }
+
+// retorna { id: id, name: name, price: price }
