@@ -21,6 +21,12 @@ const catalogos = [
     alt: "Navegação Pneu Strong",
   },
   {
+    href: "/produtos/goodyear",
+    text: "PNEUS GOODYEAR",
+    src: "menu secundario goodyear",
+    alt: "Navegação Pneu Goodyear",
+  },
+  {
     href: "/produtos/af-mundial-pneus",
     text: "PNEUS AF MUNDIAL",
     src: "menu secundario af",
