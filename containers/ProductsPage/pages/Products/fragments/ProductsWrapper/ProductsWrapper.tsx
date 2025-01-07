@@ -3,9 +3,9 @@
 import ProductCard from "@/components/ProductCard/ProductCard";
 import styles from "./ProductsWrapper.module.css";
 import PaginationControls from "../PaginationControls/PaginationControls";
-import categoryProducts from "@/data/categoryProducts";
 import { useEffect, useState } from "react";
 import ProductLoading from "@/components/ProductLoading/ProductLoading";
+import readCategory from "@/services/crud/readCategory";
 
 type AppProps = {
   category: string;
@@ -14,19 +14,18 @@ type AppProps = {
 
 type Data = {
   id: string;
-  name: string;
-  price: string;
+  data: any;
 };
 
-// TODO: substituir mock
 export default function ProductsWrapper({ category, searchParams }: AppProps) {
   const [data, setData] = useState<any>(null);
   const [loading, setLoading] = useState(true);
+  const categoryDb = category.replaceAll("ç", "c");
 
   useEffect(() => {
     const fetchData = async () => {
       try {
-        setData(await categoryProducts());
+        setData(await readCategory(categoryDb));
       } catch {
         console.error("Falha: recuperar dados.");
       } finally {
@@ -39,7 +38,6 @@ export default function ProductsWrapper({ category, searchParams }: AppProps) {
   const page = searchParams["page"] ?? "1";
   const per_page = searchParams["per_page"] ?? "12";
 
-  // TODO: atualizar com as queries do db
   const start = (Number(page) - 1) * Number(per_page); // 0, 12, 24...
   const end = start + Number(per_page); // 12, 24, 36...
 
@@ -50,7 +48,7 @@ export default function ProductsWrapper({ category, searchParams }: AppProps) {
           ? Array.from({ length: 12 }, (_, index) => {
               return <ProductLoading key={index} />;
             })
-          : data.slice(start, end).map(({ id, name, price }: Data) => {
+          : data.slice(start, end).map(({ id, data }: Data) => {
               return (
                 <ProductCard
                   href={
@@ -59,12 +57,15 @@ export default function ProductsWrapper({ category, searchParams }: AppProps) {
                     "/" +
                     id +
                     "/" +
-                    name.replaceAll("/", "-").replaceAll(" ", "-").toLowerCase()
+                    data.name
+                      .replaceAll("/", "-")
+                      .replaceAll(" ", "-")
+                      .toLowerCase()
                   }
                   id={id}
                   key={id}
-                  name={name}
-                  price={price}
+                  name={data.name}
+                  price={data.price}
                 />
               );
             })}

@@ -3,18 +3,16 @@
 import Title from "@/components/Title/Title";
 import styles from "./Highlight.module.css";
 import ProductCard from "@/components/ProductCard/ProductCard";
-import highlightProducts from "@/data/highlightProducts";
 import AdminPanelLink from "../AdminPanelLink/AdminPanelLink";
 import { useEffect, useState } from "react";
 import ProductLoading from "@/components/ProductLoading/ProductLoading";
+import readCategory from "@/services/crud/readCategory";
 
 type Data = {
   id: string;
-  name: string;
-  price: string;
+  data: { name: string; price: string };
 };
 
-// TODO: Substituir mock por um read do realtime database do Firebase
 export default function Highlight() {
   const [data, setData] = useState<any>(null);
   const [loading, setLoading] = useState(true);
@@ -22,7 +20,7 @@ export default function Highlight() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        setData(await highlightProducts());
+        setData(await readCategory("promocao"));
       } catch {
         console.error("Falha: recuperar dados.");
       } finally {
@@ -53,23 +51,26 @@ export default function Highlight() {
               <ProductLoading />
             </>
           ) : (
-            data?.map(({ id, name, price }: Data) => {
+            data.map(({ id, data }: Data) => {
               return (
                 <ProductCard
                   href={
                     "/" +
                     "produtos" +
                     "/" +
-                    "strong" +
+                    "promocao" +
                     "/" +
                     id +
                     "/" +
-                    name.replaceAll("/", "-").replaceAll(" ", "-").toLowerCase()
+                    data.name
+                      .replaceAll("/", "-")
+                      .replaceAll(" ", "-")
+                      .toLowerCase()
                   }
                   key={id}
                   id={id}
-                  name={name}
-                  price={price}
+                  name={data.name}
+                  price={data.price}
                 />
               );
             })
