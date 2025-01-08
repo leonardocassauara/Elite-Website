@@ -6,7 +6,7 @@ import LinkButton from "@/components/LinkButton/LinkButton";
 import toTitle from "@/utils/toTitle";
 import { useState, useEffect } from "react";
 import readProduct from "@/services/crud/readProduct";
-import Spinner from "@/components/Spinner/Spinner";
+import ProductPageLoading from "../ProductPageLoading/ProductPageLoading";
 
 type AppProps = {
   id: string;
@@ -35,7 +35,7 @@ export default function ProductInfo({ category, id }: AppProps) {
     <section className={styles["background-container"]}>
       <div className={styles["content-container"]}>
         {loading ? (
-          <Spinner />
+          <ProductPageLoading />
         ) : (
           <>
             <Image
@@ -60,7 +60,7 @@ export default function ProductInfo({ category, id }: AppProps) {
               </LinkButton>
             </div>
             <div className={styles["technical-section"]}>
-              <h2 className={styles["sub-title"]}>FICHA TÉCNICA</h2>
+              <h2 className={styles["sub-title"]}>MAIS INFORMAÇÕES</h2>
               <div className={styles["card-container"]}>
                 {Object.entries(data.data.technical).map(
                   ([key, value], index) => {
