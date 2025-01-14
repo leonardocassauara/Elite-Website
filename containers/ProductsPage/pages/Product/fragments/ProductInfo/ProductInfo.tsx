@@ -7,6 +7,7 @@ import toTitle from "@/utils/toTitle";
 import { useState, useEffect } from "react";
 import readProduct from "@/services/crud/readProduct";
 import ProductPageLoading from "../ProductPageLoading/ProductPageLoading";
+import ErrorApiMessage from "@/components/ErrorApiMessage/ErrorApiMessage";
 
 type AppProps = {
   id: string;
@@ -23,7 +24,7 @@ export default function ProductInfo({ category, id }: AppProps) {
       try {
         setData(await readProduct(categoryDb, id));
       } catch {
-        console.error("Falha: recuperar dados.");
+        <ErrorApiMessage />;
       } finally {
         setLoading(false);
       }

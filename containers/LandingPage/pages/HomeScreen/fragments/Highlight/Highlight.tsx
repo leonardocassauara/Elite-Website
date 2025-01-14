@@ -7,6 +7,7 @@ import AdminPanelLink from "../AdminPanelLink/AdminPanelLink";
 import { useEffect, useState } from "react";
 import ProductLoading from "@/components/ProductLoading/ProductLoading";
 import readCategory from "@/services/crud/readCategory";
+import ErrorApiMessage from "@/components/ErrorApiMessage/ErrorApiMessage";
 
 type Data = {
   id: string;
@@ -22,7 +23,7 @@ export default function Highlight() {
       try {
         setData(await readCategory("promocao"));
       } catch {
-        console.error("Falha: recuperar dados.");
+        <ErrorApiMessage />;
       } finally {
         setLoading(false);
       }

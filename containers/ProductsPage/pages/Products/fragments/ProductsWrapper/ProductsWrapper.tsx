@@ -6,6 +6,7 @@ import PaginationControls from "../PaginationControls/PaginationControls";
 import { useEffect, useState } from "react";
 import ProductLoading from "@/components/ProductLoading/ProductLoading";
 import readCategory from "@/services/crud/readCategory";
+import ErrorApiMessage from "@/components/ErrorApiMessage/ErrorApiMessage";
 
 type AppProps = {
   category: string;
@@ -27,7 +28,7 @@ export default function ProductsWrapper({ category, searchParams }: AppProps) {
       try {
         setData(await readCategory(categoryDb));
       } catch {
-        console.error("Falha: recuperar dados.");
+        <ErrorApiMessage />;
       } finally {
         setLoading(false);
       }
