@@ -14,7 +14,11 @@ export default function ProductCard({ id, name, price, href }: AppProps) {
     <li id={id} className={styles["main-container"]}>
       <Link href={href} className="focusable">
         <Image
-          src="/img/product.png"
+          src={
+            "/product/" +
+            name.replaceAll(" ", "-").replaceAll("/", "-").toLowerCase() +
+            ".jpg"
+          }
           width={318}
           height={345}
           alt="Produto em destaque"
