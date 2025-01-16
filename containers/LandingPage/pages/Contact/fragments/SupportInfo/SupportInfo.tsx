@@ -33,7 +33,7 @@ export default function SupportInfo() {
                   width={24}
                   height={24}
                 />
-                <p className={styles["information-text"]}>(21) 9 9999-9999</p>
+                <p className={styles["information-text"]}>(21) 99918-5480</p>
               </div>
               <div className={styles["information"]}>
                 <Image
@@ -42,7 +42,7 @@ export default function SupportInfo() {
                   width={24}
                   height={24}
                 />
-                <p className={styles["information-text"]}>(21) 9 9999-9999</p>
+                <p className={styles["information-text"]}>(21) 96880-4228</p>
               </div>
               <div className={styles["information"]}>
                 <Image
@@ -61,7 +61,7 @@ export default function SupportInfo() {
                   height={24}
                 />
                 <p className={styles["information-text"]}>
-                  contato@eliteautocenter.com
+                  Masautopneus@gmail.com
                 </p>
               </div>
             </div>

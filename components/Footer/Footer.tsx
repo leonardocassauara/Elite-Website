@@ -14,8 +14,9 @@ const infos = [
   { name: "Peças", href: "/produtos/peças" },
 ];
 const contacts = [
-  "+55 21 99999-9999",
-  "contato@eliteautocenter.com",
+  "+55 21 99918-5480",
+  "+55 21 96880-4228",
+  "Masautopneus@gmail.com",
   "Av. Areia Branca, 2080 - Santa Cruz",
   "Av. Padre Guilherme Decaminada, 1170 - Santa Cruz",
 ];
@@ -29,7 +30,7 @@ export default function Footer() {
         </div>
         <FooterSection title="CONTATO">
           {contacts.map((contact, index) => {
-            if (index == 1 || index == 3)
+            if (index == 2 || index == 4)
               return (
                 <p
                   className={
@@ -72,18 +73,6 @@ export default function Footer() {
           style={{ gridColumn: "1 / -2" }}
         >
           Elite Auto Center. Todos os direitos reservados.
-        </p>
-        <p className={styles["description-text"]}>
-          Site desenvolvido por{" "}
-          <Link
-            className={
-              `${styles["description-text"]} ` + `${styles["inline-link"]}`
-            }
-            target="_blank"
-            href="https://www.linkedin.com/in/leonardo-cassauara/"
-          >
-            Leonardo Cassauara.
-          </Link>
         </p>
       </div>
     </footer>
