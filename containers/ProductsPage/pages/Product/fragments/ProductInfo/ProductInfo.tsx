@@ -40,7 +40,14 @@ export default function ProductInfo({ category, id }: AppProps) {
         ) : (
           <>
             <Image
-              src="/img/product.png"
+              src={
+                "/product/" +
+                data.data.name
+                  .replaceAll(" ", "-")
+                  .replaceAll("/", "-")
+                  .toLowerCase() +
+                ".jpg"
+              }
               alt=""
               width={460}
               height={662}
