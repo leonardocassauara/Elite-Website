@@ -22,7 +22,7 @@ export default function OurStores() {
               Av. Areia Branca, 2080 - Santa Cruz, Rio de Janeiro
             </span>
             <Image
-              src="/img/stores.png"
+              src="/img/storeA.png"
               width={500}
               height={662}
               alt="Unidade Areia Branca"
@@ -35,7 +35,7 @@ export default function OurStores() {
               Av. Padre Guilherme Decaminada, 1170 - Santa Cruz, Rio de Janeiro
             </span>
             <Image
-              src="/img/stores.png"
+              src="/img/storeB.png"
               width={559}
               height={740}
               alt="Unidade Padre Guilherme"
