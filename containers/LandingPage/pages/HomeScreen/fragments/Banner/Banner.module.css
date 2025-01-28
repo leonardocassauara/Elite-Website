@@ -11,10 +11,24 @@
   width: 100%;
 }
 
-.banner {
+.banner-mobile,
+.banner-pc {
   display: block;
   object-fit: cover;
   object-position: center;
   width: 100%;
   height: auto;
+}
+
+.banner-mobile {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .banner-mobile {
+    display: block;
+  }
+  .banner-pc {
+    display: none;
+  }
 }

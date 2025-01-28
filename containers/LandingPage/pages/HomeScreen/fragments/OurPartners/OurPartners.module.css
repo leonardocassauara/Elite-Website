@@ -12,42 +12,59 @@
   width: 100%;
 }
 
-.partners-container {
-  display: flex;
-  gap: 2.5rem;
-  padding-bottom: var(--bot-space);
-  justify-content: center;
-  padding-left: 1rem;
-  padding-right: 1rem;
-  flex-wrap: nowrap;
+@keyframes carrossel {
+  from {
+    transform: translateX(0%);
+  }
+  to {
+    transform: translateX(-100%);
+  }
 }
 
-.partners-container::-webkit-scrollbar {
-  display: none;
-}
-
-.partners-container .image-container:nth-child(even) {
+.background-partners-container {
+  overflow: hidden;
+  padding: 3.75rem 0;
+  white-space: nowrap;
   position: relative;
 }
 
-.partners-container .image-container:nth-child(even)::before {
+.background-partners-container:before {
   content: "";
-  display: inline-block;
-  width: 0.125rem;
-  height: 100%;
-  background-color: var(--c3);
-  border-radius: 0.3125rem;
   position: absolute;
-  left: -1.25rem;
+  top: 0;
+  left: 0;
+  width: 6.25rem;
+  height: 100%;
+  background: linear-gradient(to left, rgba(255, 255, 255, 0), var(--c0));
+  z-index: 2;
+}
+
+.background-partners-container:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 6.25rem;
+  height: 100%;
+  background: linear-gradient(to right, rgba(255, 255, 255, 0), var(--c0));
+  z-index: 2;
+}
+
+.background-partners-container:hover .partners-container {
+  animation-play-state: paused;
+}
+
+.partners-container {
+  display: inline-block;
+  animation: 15s carrossel infinite linear;
+  white-space: nowrap;
 }
 
 .image {
-  display: block;
-  object-fit: contain;
-  object-position: center;
-  max-width: 16.0625rem;
-  width: 100%;
-  height: auto;
+  margin: 0 2.5rem;
+  width: auto;
+  height: 3.75rem;
+  display: inline;
 }
 
 @media (max-width: 768px) {
@@ -55,12 +72,15 @@
     padding-bottom: 1.25rem;
   }
   .image {
-    max-width: 9rem;
+    height: 2.5rem;
+    width: auto;
+    margin: 0 1.25rem;
   }
-  .partners-container {
-    gap: 1.25rem;
+  .background-partners-container {
+    padding: 1.25rem 0;
   }
-  .partners-container .image-container:nth-child(even)::before {
-    left: -0.625rem;
+  .background-partners-container:after,
+  .background-partners-container:before {
+    width: 5rem;
   }
 }
