@@ -96,6 +96,12 @@
   border-radius: 0.3125rem;
 }
 
+.description {
+  font: var(--font-2-s-r);
+  color: var(--c6);
+  margin-bottom: 1rem;
+}
+
 @media (max-width: 1024px) {
   .content-container {
     gap: 5rem;

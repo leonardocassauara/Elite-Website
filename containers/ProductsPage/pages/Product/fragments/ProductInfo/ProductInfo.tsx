@@ -57,6 +57,11 @@ export default function ProductInfo({ category, id }: AppProps) {
               <h1 className={styles["title"]}>
                 {data.data.name.toUpperCase()}
               </h1>
+              <p className={styles["description"]}>
+                {data.data.description.charAt(0).toUpperCase() +
+                  data.data.description.slice(1) +
+                  "."}
+              </p>
               <p className={styles["price"]}>
                 {"R$ " + data.data.price.replace(".", ",")}
               </p>
